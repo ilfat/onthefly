@@ -1,11 +1,8 @@
 ﻿using MvvmCross.Navigation;
-using MvvmCross.Presenters.Hints;
 using MvvmCross.ViewModels;
 using OnTheFly.Core.Api;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace OnTheFly.Core.ViewModels.FindTickets
 {
@@ -40,7 +37,7 @@ namespace OnTheFly.Core.ViewModels.FindTickets
                 var response = await _aviasalesApi.GetPrices(Title);
                 Tickets = new MvxObservableCollection<TicketItem>(response.Where(r => r.Actual).Select(a => new TicketItem(a)));
             }
-            catch(Exception e)
+            catch
             {
 
             }

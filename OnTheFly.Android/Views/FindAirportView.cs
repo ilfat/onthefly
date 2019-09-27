@@ -1,11 +1,9 @@
-﻿using System;
-using Android.App;
+﻿using Android.App;
 using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
 using Android.OS;
 using Android.Support.V7.Widget;
 using MvvmCross;
-using MvvmCross.Binding.BindingContext;
 using MvvmCross.Droid.Support.V7.AppCompat;
 using MvvmCross.Plugin.Messenger;
 using OnTheFly.Android.Bindings;

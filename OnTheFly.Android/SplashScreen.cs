@@ -1,7 +1,5 @@
 ﻿using Android.App;
 using MvvmCross.Droid.Support.V7.AppCompat;
-using MvvmCross.Platforms.Android.Core;
-using MvvmCross.Platforms.Android.Views;
 using OnTheFly.Core;
 
 namespace OnTheFly.Android

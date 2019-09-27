@@ -1,24 +1,18 @@
-﻿using System;
-using System.Drawing;
-
-using CoreFoundation;
-using UIKit;
-using Foundation;
-using MvvmCross.Platforms.Ios.Views;
-using OnTheFly.Core.ViewModels;
-using MvvmCross.Platforms.Ios.Presenters.Attributes;
-using MvvmCross.Binding.BindingContext;
-using MvvmCross.Platforms.Ios.Binding.Views;
+﻿using MapKit;
 using MvvmCross;
-using MvvmCross.Plugin.Messenger;
-using MapKit;
-using OnTheFly.iOS.Views.FindAirport;
-using System.Linq;
+using MvvmCross.Binding.BindingContext;
 using MvvmCross.Platforms.Ios.Binding;
+using MvvmCross.Platforms.Ios.Binding.Views;
+using MvvmCross.Platforms.Ios.Views;
+using MvvmCross.Plugin.Messenger;
+using OnTheFly.Core.ViewModels;
+using OnTheFly.iOS.Views.FindAirport;
+using System;
+using System.Linq;
+using UIKit;
 
 namespace OnTheFly.iOS.Views
 {
-    //[MvxRootPresentation(WrapInNavigationController = true)]
     public partial class FindAirportView : MvxViewController<FindAirportViewModel>
     {
         private UIBarButtonItem _searchButton;

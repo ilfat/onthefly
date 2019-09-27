@@ -5,9 +5,7 @@ using MvvmCross.ViewModels;
 using OnTheFly.Core.Api;
 using OnTheFly.Core.ViewModels.FindTickets;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace OnTheFly.Core.ViewModels
@@ -95,7 +93,7 @@ namespace OnTheFly.Core.ViewModels
                 {
                     AirportsAutocomplete.Clear();
                 }
-            }catch(Exception e)
+            }catch
             {
             }
         }
@@ -138,7 +136,7 @@ namespace OnTheFly.Core.ViewModels
                     EmptyVisibility = false;
                 }
             }
-            catch (Exception e)
+            catch
             {
                 EmptyVisibility = true;
                 AirportsVisibility = false;

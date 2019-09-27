@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Foundation;
+﻿using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Platforms.Ios.Binding.Views;
 using OnTheFly.Core.ViewModels;
+using System;
 using UIKit;
 
 namespace OnTheFly.iOS.Views
@@ -22,7 +18,6 @@ namespace OnTheFly.iOS.Views
 
         public AutocompleteIataCell(IntPtr handle): base(handle)
         {
-            //searchImg.Image = new UIImage("UIBarButtonSystemItemSearch");
             this.DelayBind(() =>
             {
                 this.CreateBindingSet<AutocompleteIataCell, AutocompleteIataItem>()

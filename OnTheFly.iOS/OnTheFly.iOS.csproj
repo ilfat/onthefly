@@ -71,10 +71,6 @@
     <AppExtensionDebugBundleId />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="SplashScreen.cs" />
-    <Compile Include="SplashScreen.designer.cs">
-      <DependentUpon>SplashScreen.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\FindTickets\FindTicketsView.cs" />
     <Compile Include="Views\FindTickets\FindTicketsView.designer.cs">
       <DependentUpon>FindTicketsView.cs</DependentUpon>
@@ -110,8 +106,6 @@
     <InterfaceDefinition Include="Views\FindAirport\IataCell.xib" />
     <InterfaceDefinition Include="Views\FindTickets\FindTicketsView.xib" />
     <InterfaceDefinition Include="Views\FindTickets\TicketViewCell.xib" />
-    <InterfaceDefinition Include="Views\FindAirport\FindAirportView - Копировать.xib" />
-    <InterfaceDefinition Include="SplashScreen.xib" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

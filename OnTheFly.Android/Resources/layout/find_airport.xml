@@ -14,13 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:title="@string/app_name"
-            android:animateLayoutChanges="true">
-            <!--<ImageView
-                android:background="?android:attr/selectableItemBackgroundBorderless"
-                android:layout_gravity="left"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="?android:attr/homeAsUpIndicator"/>-->
+            android:animateLayoutChanges="true">            
             <android.support.v7.widget.SearchView
                 android:id="@+id/search_view"
                 android:inputType="textCapCharacters"
