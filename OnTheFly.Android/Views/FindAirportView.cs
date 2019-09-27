@@ -39,7 +39,7 @@ namespace OnTheFly.Android.Views
             foreach (var marker in message.Markers)
             {
                 var markerOptions = new MarkerOptions();
-                markerOptions.SetPosition(new LatLng(marker.Lat, marker.Lng));
+                markerOptions.SetPosition(new LatLng(marker.Lng, marker.Lat));
                 markerOptions.SetTitle(marker.Title);
                 _googleMap.AddMarker(markerOptions);
             }
