@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnTheFly.Core", "OnTheFly.Core\OnTheFly.Core.csproj", "{BDFF005D-E147-425C-9632-F4235A50EA27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnTheFly.Core", "OnTheFly.Core\OnTheFly.Core.csproj", "{BDFF005D-E147-425C-9632-F4235A50EA27}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnTheFly.Android", "OnTheFly.Android\OnTheFly.Android.csproj", "{CDA2A3DE-3002-4AA9-BD4B-79BD91A55699}"
 EndProject

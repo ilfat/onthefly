@@ -1,4 +1,5 @@
-﻿using MvvmCross.Navigation;
+﻿using MvvmCross.Commands;
+using MvvmCross.Navigation;
 using MvvmCross.Plugin.Messenger;
 using MvvmCross.ViewModels;
 using OnTheFly.Core.Api;
@@ -20,10 +21,10 @@ namespace OnTheFly.Core.ViewModels
             _mvxMessenger = mvxMessenger;
             _navigationService = navigationService;
         }
+
         public void Init()
         {
         }
-
 
         private string _Filter = "";
         private IAviasalesApi _aviasalesApi;
@@ -96,7 +97,6 @@ namespace OnTheFly.Core.ViewModels
                 }
             }catch(Exception e)
             {
-                ToString();
             }
         }
 
@@ -114,6 +114,7 @@ namespace OnTheFly.Core.ViewModels
             EmptyVisibility = false;
             Airports.Clear();
             SearchProgressVisibility = true;
+            AirportsVisibility = false;
             try
             {
                 SupportedDirectionsResponse response = null;
@@ -126,11 +127,21 @@ namespace OnTheFly.Core.ViewModels
                 _directions = response.Directions;
                 var markers = response.Directions.Where(d => d.Coordinates[0].HasValue && d.Coordinates[1].HasValue).Select(w => new Marker(w.Iata, w.Coordinates));
                 _mvxMessenger.Publish(new CreateMarkersMessage(this, markers));
+                if (Airports.Count == 0)
+                {
+                    AirportsVisibility = false;
+                    EmptyVisibility = true;
+                }
+                else
+                {
+                    AirportsVisibility = true;
+                    EmptyVisibility = false;
+                }
             }
             catch (Exception e)
             {
-                ToString();
                 EmptyVisibility = true;
+                AirportsVisibility = false;
             }
             SearchProgressVisibility = false;
         }
@@ -181,6 +192,36 @@ namespace OnTheFly.Core.ViewModels
                 _EmptyVisibility = value;
                 RaisePropertyChanged(() => EmptyVisibility);
             }
-        } 
+        }
+        public string Title => strings.app_name;
+
+        public MvxCommand<AutocompleteIataItem> AutocompleteSelectedCommand
+        {
+            get
+            {
+                return new MvxCommand<AutocompleteIataItem>(AutocompleteSelected);
+            }
+        }
+        public MvxCommand<IataItem> AirportSelectedCommand
+        {
+            get
+            {
+                return new MvxCommand<IataItem>(AirportClick);
+            }
+        }
+
+        public bool AirportsVisibility
+        {
+            get { return _AirportsVisibility; }
+            set
+            {
+                _AirportsVisibility = value;
+                RaisePropertyChanged(() => AirportsVisibility);
+            }
+        }
+
+        public string CancelButtonTitle => strings.cancel;
+
+        public bool _AirportsVisibility = false;
     }
 }

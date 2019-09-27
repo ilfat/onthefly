@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FindTicketsView">
+            <connections>
+                <outlet property="view" destination="1" id="RRd-Eg-VrN"/>
+                <outlet property="iataText" destination="4725" id="name-outlet-4725"/>
+                <outlet property="cityText" destination="4758" id="name-outlet-4758"/>
+                <outlet property="ticketsTabView" destination="5752" id="name-outlet-5752"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <color key="tintColor" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" white="1" alpha="1"/>
+            <color key="backgroundColor" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" white="1" alpha="1"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="4562" translatesAutoresizingMaskIntoConstraints="NO">
+                    <rect key="frame" x="16" y="16" width="150" height="100"/>
+                    <constraints>
+                        <constraint id="5180" firstAttribute="height" constant="100"/>
+                        <constraint id="5213" firstAttribute="width" constant="150"/>
+                    </constraints>
+                    <color key="backgroundColor" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" white="0.666666666666667" alpha="1"/>
+                    <color key="tintColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4725" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                    <rect key="frame" x="292" y="36" width="78" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17" weight="semibold"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4758" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                    <rect key="frame" x="292" y="92" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5752" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                    <rect key="frame" x="44" y="156" width="240" height="128"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
+            <constraints>
+                <constraint id="4595" firstItem="4562" firstAttribute="top" secondItem="1" secondAttribute="top" constant="16"/>
+                <constraint id="4660" firstItem="4562" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="16"/>
+                <constraint id="4952" firstItem="4725" firstAttribute="top" secondItem="4562" secondAttribute="top" constant="8"/>
+                <constraint id="5017" firstItem="4725" firstAttribute="leading" secondItem="4562" secondAttribute="trailing" constant="16"/>
+                <constraint id="5082" firstItem="4758" firstAttribute="leading" secondItem="4725" secondAttribute="leading"/>
+                <constraint id="5115" firstItem="4758" firstAttribute="top" secondItem="4725" secondAttribute="bottom" constant="16"/>
+                <constraint id="5817" firstItem="5752" firstAttribute="top" secondItem="4562" secondAttribute="bottom" constant="16"/>
+                <constraint id="5882" firstItem="5752" firstAttribute="leading" secondItem="1" secondAttribute="leading"/>
+                <constraint id="5979" firstAttribute="trailing" secondItem="5752" secondAttribute="trailing"/>
+                <constraint id="6044" firstAttribute="bottom" secondItem="5752" secondAttribute="bottom"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

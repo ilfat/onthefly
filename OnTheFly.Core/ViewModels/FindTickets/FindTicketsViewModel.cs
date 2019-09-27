@@ -96,6 +96,8 @@ namespace OnTheFly.Core.ViewModels.FindTickets
                 _Tickets = value;
                 RaisePropertyChanged(() => Tickets);
             }
-        } 
+        }
+
+        public string BackButtonTitle => strings.back;
     }
 }
